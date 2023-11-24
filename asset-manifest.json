@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/davidmurage.github.io/Portfolio/static/css/main.bf538fe7.css",
+    "main.js": "/davidmurage.github.io/Portfolio/static/js/main.d7e0683b.js",
+    "static/media/HeroImage.jpg": "/davidmurage.github.io/Portfolio/static/media/HeroImage.b75b1706d814c1539f71.jpg",
+    "index.html": "/davidmurage.github.io/Portfolio/index.html",
+    "main.bf538fe7.css.map": "/davidmurage.github.io/Portfolio/static/css/main.bf538fe7.css.map",
+    "main.d7e0683b.js.map": "/davidmurage.github.io/Portfolio/static/js/main.d7e0683b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bf538fe7.css",
+    "static/js/main.d7e0683b.js"
+  ]
+}
