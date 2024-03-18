@@ -135,7 +135,7 @@ export const experiences = [
     
   },
   {
-    id: 0,
+    id: 1,
     img: "https://davidmurage.github.io/Images/frontend-mentor.jpg",
     role: "Frontend Engineer Trainee",
     company: "Frontend mentor",
@@ -145,6 +145,20 @@ export const experiences = [
       "Material UI",
       "HTML",
       "CSS",
+      "JavaScript",
+    ],
+  },
+
+  {
+    id: 2,
+    img: "https://davidmurage.github.io/Images/zidio.png",
+    role: "Web developer internship",
+    company: "Zidio development",
+    date: "Feb 2024 - present",
+    desc: "Worked as a backend developer and Implemented features like: User Authentication,Real-time Location Tracking, and Security and Privacy Measures",
+    skills: [
+      "Node.js",
+      "MongoDB",
       "JavaScript",
     ],
   },
