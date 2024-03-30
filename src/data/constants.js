@@ -154,7 +154,7 @@ export const experiences = [
     img: "https://davidmurage.github.io/Images/zidio.png",
     role: "Web developer internship",
     company: "Zidio development",
-    date: "Feb 2024 - present",
+    date: "Feb 2024 - March 2024",
     desc: "Worked as a backend developer and Implemented features like: User Authentication,Real-time Location Tracking, and Security and Privacy Measures",
     skills: [
       "Node.js",
