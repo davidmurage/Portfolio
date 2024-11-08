@@ -9,7 +9,7 @@ export const Bio = {
     "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
   github: "https://github.com/davidmurage",
   resume:
-    "https://davidmurage.github.io/Images/David_Murage.pdf",
+    "https://davidmurage.github.io/Images/resume-david.pdf",
   linkedin: "https://www.linkedin.com/in/david-murage-4513a722a/",
   insta: "https://www.instagram.com/david_murage5",
   facebook: "https://www.facebook.com/profile.php?id=100085263425164&mibextid=ZbWKwL",
