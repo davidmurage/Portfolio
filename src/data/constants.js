@@ -183,6 +183,27 @@ export const education = [
 ];
 
 export const projects = [
+   {
+    id: 0,
+    title: "Venue-Booking-System",
+    date: "Sep 2024 - Nov 2024",
+    description:
+      "A full-stack web application that streamlines venue reservations by enabling users to browse available venues, view details, and book online. The system includes user and admin roles, allowing users to make bookings and manage reservations, while admins can create, update, or delete venues. Built with the MERN stack (MongoDB, Express, React, Node.js), it incorporates secure user authentication, payment integration, and image uploads for venues.",
+    image:
+      "https://davidmurage.github.io/Images/venues-web.png",
+    tags: [
+      "MongoDB",
+      "Express Js",
+      "React Js",
+      "Node Js",
+      "API intergration"
+      
+      
+    ],
+    category: "web app",
+    github: "https://github.com/davidmurage/Venue-system.git",
+    webapp: "https://venue-system.onrender.com/",
+  },
   {
     id: 0,
     title: "Mern-trip-app",
