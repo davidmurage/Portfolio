@@ -125,9 +125,7 @@ export const experiences = [
     role: "ICT specialist",
     company: "KALRO",
     date: "Sep 2024 - Dec 2024",
-    desc: " Assisted in collecting, cleaning, and processing large datasets related to agricultural research." 
-      " Utilized Excel to generate actionable insights from research data."
-      "Worked on backend systems to ensure seamless data flow and system functionality.",
+    desc: "Assisted in collecting, cleaning, and processing large datasets related to agricultural research.Utilized Excel to generate actionable insights from research data.Worked on backend systems to ensure seamless data flow and system functionality.",
     skills: [
       "React",
       "JavaScript",
