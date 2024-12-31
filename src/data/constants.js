@@ -121,11 +121,13 @@ export const skills = [
 export const experiences = [
   {
     id: 0,
-    img: "https://davidmurage.github.io/Images/Upwork-Logo.png",
-    role: "Frontend developer freelancer",
-    company: "Upwork",
-    date: "Jan 2023 - Present",
-    desc: "Designing websites, managing DevOps, and streamlining the process with automation.",
+    img: "https://davidmurage.github.io/Images/Kalro logo.avif",
+    role: "ICT specialist",
+    company: "KALRO",
+    date: "Sep 2024 - Dec 2024",
+    desc: " Assisted in collecting, cleaning, and processing large datasets related to agricultural research." 
+      " Utilized Excel to generate actionable insights from research data."
+      "Worked on backend systems to ensure seamless data flow and system functionality.",
     skills: [
       "React",
       "JavaScript",
