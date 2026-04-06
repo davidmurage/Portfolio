@@ -21,3 +21,13 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+_bmad/
+_bmad-output/
+.agents
+.claude
+.cursor
+.github
+.opencode
+design-artifacts/
+docs/

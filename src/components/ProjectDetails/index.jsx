@@ -197,12 +197,12 @@ const index = ({ openModal, setOpenModal }) => {
                         }}
                         onClick={() => setOpenModal({ state: false, project: null })}
                     />
-                    <Image src={project?.image} />
+                    <Image src={project?.image} alt={project?.title} />
                     <Title>{project?.title}</Title>
                     <Date>{project.date}</Date>
                     <Tags>
-                        {project?.tags.map((tag) => (
-                            <Tag>{tag}</Tag>
+                        {project?.tags.map((tag, index) => (
+                            <Tag key={`${project?.id}-detail-tag-${index}`}>{tag}</Tag>
                         ))}
                     </Tags>
                     <Desc>{project?.description}</Desc>
@@ -210,14 +210,14 @@ const index = ({ openModal, setOpenModal }) => {
                         <>
                             <Label>Members</Label>
                             <Members>
-                                {project?.member.map((member) => (
-                                    <Member>
+                                {project?.member.map((member, index) => (
+                                    <Member key={`${member.name}-${index}`}>
                                         <MemberImage src={member.img} />
                                         <MemberName>{member.name}</MemberName>
-                                        <a href={member.github} target="new" style={{textDecoration: 'none', color: 'inherit'}}>
+                                        <a href={member.github} target="new" rel="noreferrer" style={{textDecoration: 'none', color: 'inherit'}}>
                                             <GitHub />
                                         </a>
-                                        <a href={member.linkedin} target="new" style={{textDecoration: 'none', color: 'inherit'}}>
+                                        <a href={member.linkedin} target="new" rel="noreferrer" style={{textDecoration: 'none', color: 'inherit'}}>
                                             <LinkedIn />
                                         </a>
                                     </Member>
@@ -226,8 +226,12 @@ const index = ({ openModal, setOpenModal }) => {
                         </>
                     )}
                     <ButtonGroup>
-                        <Button dull href={project?.github} target='new'>View Code</Button>
-                        <Button href={project?.webapp} target='new'>View Live App</Button>
+                        {project?.github && (
+                            <Button dull href={project.github} target='new' rel="noreferrer">View Code</Button>
+                        )}
+                        {project?.webapp && (
+                            <Button href={project.webapp} target='new' rel="noreferrer">View Live App</Button>
+                        )}
                     </ButtonGroup>
                 </Wrapper>
             </Container>

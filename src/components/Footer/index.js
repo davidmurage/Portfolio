@@ -102,7 +102,7 @@ function Footer() {
           <SocialMediaIcon href={Bio.insta} target="display"><InstagramIcon /></SocialMediaIcon>
         </SocialMediaIcons>
         <Copyright>
-          &copy; 2023 David Murage. All rights reserved.
+          &copy; 2026 David Murage. All rights reserved.
         </Copyright>
 
       </FooterWrapper>
