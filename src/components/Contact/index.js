@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { Snackbar } from '@mui/material';
+import { Bio } from '../../data/constants';
 
 const Container = styled.div`
 display: flex;
@@ -54,6 +55,14 @@ const Desc = styled.div`
     }
 `;
 
+const EmailLink = styled.a`
+  color: ${({ theme }) => theme.primary};
+  text-decoration: none;
+  font-weight: 600;
+  &:hover {
+    text-decoration: underline;
+  }
+`
 
 const ContactForm = styled.form`
   width: 95%;
@@ -120,46 +129,49 @@ const ContactButton = styled.input`
   font-weight: 600;
 `
 
-
-
 const Contact = () => {
-
-  //hooks
   const [open, setOpen] = React.useState(false);
+  const [snackbarMessage, setSnackbarMessage] = React.useState('');
   const form = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    form.current.reply_to.value = form.current.from_email.value;
+
     emailjs.sendForm('service_cv0bod4', 'template_h7rcxfc', form.current, 'X2eZ_K-z13C3UYoLF')
-      .then((result) => {
+      .then(() => {
+        setSnackbarMessage(`Email sent successfully to ${Bio.email}!`);
         setOpen(true);
         form.current.reset();
-      }, (error) => {
-        console.log(error.text);
+      }, () => {
+        setSnackbarMessage('Unable to send email right now. Please use the direct email link.');
+        setOpen(true);
       });
   }
-
-
 
   return (
     <Container id="contact">
       <Wrapper>
         <Title>Contact</Title>
-        <Desc>Feel free to reach out to me for any questions or opportunities!</Desc>
+        <Desc>
+          Feel free to reach out to me for any questions or opportunities! Email:{' '}
+          <EmailLink href={`mailto:${Bio.email}`}>{Bio.email}</EmailLink>
+        </Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
-          <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" />
-          <ContactInput placeholder="Your Name" name="from_name" />
-          <ContactInput placeholder="Subject" name="subject" />
-          <ContactInputMessage placeholder="Message" rows="4" name="message" />
+          <ContactTitle>Email Me</ContactTitle>
+          <ContactInput placeholder="Your Email" name="from_email" type="email" required />
+          <ContactInput placeholder="Your Name" name="from_name" required />
+          <ContactInput placeholder="Subject" name="subject" required />
+          <ContactInputMessage placeholder="Message" rows="4" name="message" required />
+          <input type="hidden" name="to_email" defaultValue={Bio.email} />
+          <input type="hidden" name="reply_to" defaultValue="" />
           <ContactButton type="submit" value="Send" />
         </ContactForm>
         <Snackbar
           open={open}
           autoHideDuration={6000}
-          onClose={()=>setOpen(false)}
-          message="Email sent successfully!"
-          severity="success"
+          onClose={() => setOpen(false)}
+          message={snackbarMessage}
         />
       </Wrapper>
     </Container>
